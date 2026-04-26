@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "KingDisplay";
+  src: url("/fonts/LuckiestGuy.ttf") format("ttf"); /* Adjust filename/extension as needed */
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --background: #0a0a0a;
+  --text: #e6c25d;
+  --accent: #ffd700;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-text: var(--text);
+  --color-accent: var(--accent);
+
+  /* custom z-index values */
+  --z-index-navbar: 50;
+
+  /* Adding your custom display font to Tailwind */
+  --font-display: "KingDisplay", serif;
+  --font-sans: var(--font-geist-sans);
+}
+
+/* Custom animation for the scrolling text */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-infinite-scroll {
+  display: flex;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+  /* Prioritizing your project's sans font over Arial */
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
