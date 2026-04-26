@@ -1,3 +1,5 @@
+![alt text](image.png)
+
 This **README** is designed to reflect the professional, technical, and spiritual DNA of the **Mountain of Kings Ministries (MOKM)** project. It provides a clear roadmap for any "Marketplace Apostle" or developer looking to contribute to the repository.
 
 ---
